@@ -30,10 +30,11 @@ public class CreateFrame {
 		return contentPane;
 	}
 
-	JButton b1 = new JButton("Swing");
-	JButton b2 = new JButton("Stop");
-    JButton b3 = new JButton("HintergrundsFarbe");
-    JButton b4 = new JButton("Textfarbe ");
+	private JButton b1 = new JButton("Swing");
+	private JButton b2 = new JButton("Stop");
+	private JButton b3 = new JButton("HintergrundsFarbe");
+	private JButton b4 = new JButton("Textfarbe ");
+	private JButton b5 = new JButton("ok");
 	
 	public JButton getB1() {
 		return b1;
@@ -50,8 +51,31 @@ public class CreateFrame {
 	public JButton getB4() {
 		return b4;
 	}
-
+	public JButton getB5() {
+		return b5;
+	}
 	
+	private JTextField te = new JTextField("Schriftgrösse");
+	
+	
+	public JTextField getTe() {
+		return te;
+	}
+
+	public void ecrit(){
+		
+		
+		    
+	   		frame.getContentPane().add(te,BorderLayout.NORTH);
+	   	    te.setSize(200,40);
+	        frame.getContentPane().add(b5,BorderLayout.NORTH);
+	        b5.setSize(250,50);
+			
+	        JPanel panel3 = new JPanel();
+			panel3.add(te);
+			panel3.add(b5);
+			frame.getContentPane().add(panel3,"North");
+	}
 	
 	public void bouton(){	
 
@@ -59,6 +83,8 @@ public class CreateFrame {
 		frame.getContentPane().add(b1,BorderLayout.SOUTH);
         frame.getContentPane().add(b3, BorderLayout.EAST);
         frame.getContentPane().add(b4, BorderLayout.EAST);
+       
+		
         
 		Insets insets = frame.getContentPane().getInsets();
 		b1.resize(70, 30);
@@ -80,13 +106,14 @@ public class CreateFrame {
 		 gbc3.gridy = 2;
 		 panel2.add(b4, gbc3);
 		 
-		 
-	}
+		}
 	
 	public void fenster(){
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300,300); 
    		contentPane.setLayout(new BorderLayout());
+   		
+   		
    		
 	
 	}

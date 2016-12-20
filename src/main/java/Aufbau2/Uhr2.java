@@ -11,23 +11,26 @@ public class Uhr2 {
 		 Taille t = new Taille(cf);  
 		 Farbe h = new Farbe(cf,init);
 		 SaveFarbe s = new SaveFarbe(cf, init);
-		 Schrift a = new Schrift(cf);
+		 Schrift a = new Schrift(cf,init);
 		 
-	a.a();
+	
 	cf.fenster();
 	h.hinter();
 	h.schrift();
 	cf.einlesenFrame();
 	cf.bouton();
+	cf.ecrit();
+	s.hinterfarbe();
 	
     cf.getContentPane().add(init.getLabel1(),BorderLayout.CENTER);
 	cf.getFrame().setVisible(true);
 	
+	 a.ok();
      l.swing();
 	 l.stop();
 		
 	 t.save();
-	 s.hinterfarbe();
+	 
 	 
 	 
 	}
