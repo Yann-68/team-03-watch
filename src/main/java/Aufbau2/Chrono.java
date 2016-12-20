@@ -4,11 +4,16 @@ import javax.swing.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.*;
+import java.util.Calendar;
 
 public class Chrono {
-	private int h=0;
-	private int m=0;
-	private int s=0;
+	
+	Calendar cal = Calendar.getInstance();
+	
+	private int h = cal.get(Calendar.HOUR_OF_DAY);
+    private int m = cal.get(Calendar.MINUTE);
+    private int s = cal.get(Calendar.SECOND);
+
 	private int delay=1000;
 	
 	
